@@ -11,7 +11,7 @@ public class EmployeeAdmin {
 	In addition, this list of Employees must be sorted by social security number, in ascending order (from numerically smallest to numerically largest).
 	*/
 	public static List<Employee> prepareReport(HashMap<String, Employee> table, List<String> socSecNums) {
-		if(socSecNums==null)return null;
+		if(table==null || socSecNums==null)return null;
 		ArrayList<Employee> emp=new ArrayList<>();
 		for(String s:socSecNums){
 			if(table.containsKey(s) && table.get(s).getSalary()>80000){
